@@ -1,0 +1,53 @@
+.parent {
+  background-color: hsla(200, 100%, 20%);
+  height: 400px;
+  width: 400px;
+  cursor: pointer;
+}
+.child {
+  background-color: red;
+  height: 50%;
+  width: 50%;
+  /* transform: translateX(50%) translateY(50%); */
+
+  /* border-radius: 5%; */
+  
+  /* transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s; */
+
+  /* transition: all 0.2s ease-in-out 0s; */
+
+  animation-name: kshama-animation;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.parent:hover .child {
+  /* transform: translateX(100%); */
+  /* background-color: green; */
+
+  /* transform: translateX(50%) translateY(50%); */
+  /* border-radius: 50%; */
+  
+  animation-play-state: paused;
+}
+
+@keyframes kshama-animation {
+  0% {
+    transform: translateX(0%);
+  }
+  33% {
+    transform: translateY(100%);
+  }
+  66% {
+    transform: translateX(100%) translateY(100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
